@@ -14,7 +14,7 @@ var sumOfElementPair = function(arrays) {
     }
   }
 
-console.log("La somme est ", sum)
+console.log("La somme est ", sum);
 };
 
 
@@ -55,27 +55,39 @@ var sumOfDiagonaleOfMatrix = function(matrix) {
 
   var tailleOfMatrix = matrix.length;
 
-
   for(var i = 0; i < matrix.length; i++){
      sumOfFirstDiagonale += matrix[i][i];
-     sumOfSecondDiagonale += matrix[i][tailleOfMatrix-i-1]
+     sumOfSecondDiagonale += matrix[i][tailleOfMatrix-i-1];
   }
     
-  console.log("elmt sumOfFirstDiagonale ", sumOfFirstDiagonale)
-
-  console.log("elmt sumOfSecondDiagonale ", sumOfSecondDiagonale)
+  console.log("elmt sumOfFirstDiagonale ", sumOfFirstDiagonale);
+ console.log("elmt sumOfSecondDiagonale ", sumOfSecondDiagonale);
  
-
 };
 
 
-sumOfDiagonaleOfMatrix([[1,3,4],[2,5,4],[1,3,4]])
+//sumOfDiagonaleOfMatrix([[1,3,4],[2,5,4],[1,3,4]]);
 
-//const matrix = [
-//   [1,3,4],
-//   [2,5,4],
-//   [1,3,4]
-//]
 
-//diag1 = 1 + 5 + 4
-//diag2 = 4 + 5 + 1
+function missingItemInLisst(list, element) {
+  var isInList = false;
+
+  if(list.length === 0 ){
+    console.log("La liste est vide");
+  }
+
+
+  for(var i = 0; i < list.length; i++){
+     if(list[i] === element) {
+       isInList = true;
+     } else {
+       isInList ;
+     }
+  }
+    
+  console.log("isInList ", isInList) 
+
+}
+
+
+missingItemInLisst([1,3,4],0);
